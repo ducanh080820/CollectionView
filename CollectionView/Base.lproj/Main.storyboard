@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Uk-vZ-B24">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="pRe-uD-tHU">
+            <objects>
+                <collectionViewController id="7Uk-vZ-B24" customClass="CollectionViewController" customModule="CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wpT-uh-khC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dv5-dt-BbL">
+                            <size key="itemSize" width="374" height="152"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="LmW-ry-evU" customClass="CollectionViewCell" customModule="CollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.5" y="0.0" width="374" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="152"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-0B-Mgp">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="90W-dN-EFC"/>
+                                                <constraint firstAttribute="width" secondItem="u7p-0B-Mgp" secondAttribute="height" id="Rml-r1-R8c"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4s-Ly-vTY">
+                                            <rect key="frame" x="240" y="61" width="55" height="30"/>
+                                            <state key="normal" title="Remove"/>
+                                            <connections>
+                                                <action selector="removeItem:" destination="LmW-ry-evU" eventType="touchUpInside" id="gi7-dV-hTu"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="u7p-0B-Mgp" firstAttribute="leading" secondItem="LmW-ry-evU" secondAttribute="leading" id="7xQ-4F-gbd"/>
+                                    <constraint firstItem="u7p-0B-Mgp" firstAttribute="top" secondItem="LmW-ry-evU" secondAttribute="top" id="9ix-cH-FW2"/>
+                                    <constraint firstItem="m4s-Ly-vTY" firstAttribute="leading" secondItem="u7p-0B-Mgp" secondAttribute="trailing" constant="90" id="ZX1-j9-sYn"/>
+                                    <constraint firstItem="m4s-Ly-vTY" firstAttribute="centerY" secondItem="LmW-ry-evU" secondAttribute="centerY" id="niy-VF-ijh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="photoImage" destination="u7p-0B-Mgp" id="HUQ-in-RDh"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="7Uk-vZ-B24" id="W4t-Ck-t8B"/>
+                            <outlet property="delegate" destination="7Uk-vZ-B24" id="Z6M-3M-WDa"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWb-UM-ob5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1144.8" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+</document>
